@@ -17,6 +17,20 @@ Each class has a `main()` method — run them individually from your IDE or via 
 | `OrderList` | `/merchant-passbook/search/list/order/v2` | Fetch list of orders for a date range |
 | `TransactionStatus` | `/v3/order/status` | Fetch status of a specific order by ID |
 
+## Current Errors
+
+These are the responses we are getting when running the test classes against the production endpoint:
+
+**OrderList**
+```json
+{"status":"FAILURE","count":0,"resultCode":"00000010","errorMessage":"FAILURE"}
+```
+
+**TransactionStatus**
+```json
+{"head":{"responseTimestamp":"1780605468361","version":"v1"},"body":{"resultInfo":{"resultStatus":"TXN_FAILURE","resultCode":"501","resultMsg":"System Error."}}}
+```
+
 ## APIs We Need Enabled
 
 Please enable the following APIs for our merchant account:
