@@ -23,12 +23,16 @@ These are the responses we are getting when running the test classes against the
 
 **OrderList**
 ```json
-{"status":"FAILURE","count":0,"resultCode":"00000010","errorMessage":"FAILURE"}
+Request body: {"body":{"mid":"VELOCI01414270241377","fromDate":"2026-06-04T00:00:00+05:30","toDate":"2026-06-04T23:59:59+05:30","orderSearchType":"TRANSACTION","orderSearchStatus":"SUCCESS","pageNumber":"1","pageSize":"20","merchantOrderId":"","payMode":"","isSort":"","searchConditions":""},"head":{"signature":"7Q2oOZ3eAmpbXxawXtSHhEzsVePI140NhOBCoJVTJwvODU+ZkuRfB+0f60mbAmoNiNaDLpaInNBW5BFybjvGs6IezlKg5MiuBbv99vjzB/M=","tokenType":"CHECKSUM","requestTimestamp":""}}
+Response status: 500
+Response body: {"status":"FAILURE","count":0,"resultCode":"00000010","errorMessage":"FAILURE"}
 ```
 
 **TransactionStatus**
 ```json
-{"head":{"responseTimestamp":"1780605468361","version":"v1"},"body":{"resultInfo":{"resultStatus":"TXN_FAILURE","resultCode":"501","resultMsg":"System Error."}}}
+Request body: {"body":{"mid":"VELOCI01414270241377","orderId":"YOUR_ORDER_ID_HERE","txnType":""},"head":{"version":"v1","channelId":"","requestTimestamp":"","clientId":"","signature":"5ZXJVqivfDBTyQegVkBByDaMMopamyfjC+pWAWf8CjxPYJJ67m9eQ7dkfP00ZUu4gZ8mNtQR8VnY2Pugvi/jxWTkiCyxQ+0EZFootxsIbq0="}}
+Response status: 200
+Response body: {"head":{"responseTimestamp":"1781280827329","version":"v1"},"body":{"resultInfo":{"resultStatus":"TXN_FAILURE","resultCode":"501","resultMsg":"System Error."}}}
 ```
 
 ## APIs We Need Enabled
